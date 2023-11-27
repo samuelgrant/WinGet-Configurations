@@ -17,4 +17,11 @@ Changes the following settings:
 - Enables dark mode (You still need to choose an accent in Settings > Personalize)
 
 ## Installs
-// todo
+- [Discord](https://winget.run/pkg/Discord/Discord)
+- [Firefox](https://winget.run/pkg/Mozilla/Firefox)
+- [Google Chrome](https://winget.run/pkg/Google/Chrome)
+- [Microsoft Office 365](https://winget.run/pkg/Microsoft/Office)
+- [Notepad++](https://winget.run/pkg/Notepad++/Notepad++)
+- [ShareX](https://winget.run/pkg/ShareX/ShareX)
+- [Steam](https://winget.run/pkg/Valve/Steam)
+- [Yubikey Manager](https://winget.run/pkg/Yubico/YubikeyManager)

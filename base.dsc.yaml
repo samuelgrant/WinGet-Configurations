@@ -54,4 +54,75 @@ properties:
         Ensure: Present
 
     # Install software
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: discord
+      directives:
+        description: Install Discord
+        allowPrerelease: true
+      settings:
+        id: Discord.Discord
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: chrome
+      directives:
+        description: Install Google Chrome
+        allowPrerelease: true
+      settings:
+        id: Google.Chrome
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: firefox
+      directives:
+        description: Install Firefox
+        allowPrerelease: true
+      settings:
+        id: Mozilla.Firefox
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: office365
+      directives:
+        description: Install Office 365
+        allowPrerelease: true
+      settings:
+        id: Microsoft.Office
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: notepad++
+      directives:
+        description: Install Notepad++
+        allowPrerelease: true
+      settings:
+        id: Notepad++.Notepad++
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: sharex
+      directives:
+        description: Install ShareX
+        allowPrerelease: true
+      settings:
+        id: ShareX.ShareX
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: steam
+      directives:
+        description: Install Steam
+        allowPrerelease: true
+      settings:
+        id: Valve.Steam
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: yubikey_Manager
+      directives:
+        description: Install YubikeyManager
+        allowPrerelease: true
+      settings:
+        id: Yubico.YubikeyManager
+        source: winget            
     ## todo

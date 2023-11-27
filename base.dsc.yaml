@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify min OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+    # Configure basic Windows settings
+    - resource: Microsoft.Windows.Developer/TaskBarAlignment
+      directives:
+        description: Left align taskbar
+        allowPrerelease: true
+      settings:
+        Alignment: Left
+
+    - resource: Microsoft.Windows.Developer/ShowSecondsInClock
+      directives:
+        description: Hide seconds in clock
+        allowPrerelease: true
+      settings:
+        Ensure: Absent
+
+    - resource: Microsoft.Windows.Developer/HideFileExtensions
+      directives:
+        description: Show file extensions
+        allowPrerelease: true
+      settings:
+        Ensure: Absent
+    
+    - resource: Microsoft.Windows.Developer/ShowHiddenFiles
+      directives:
+        description: Show hidden files
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+
+    - resource: Microsoft.Windows.Developer/ShowTaskViewButton
+      directives:
+        description: Hide task view from taskbar
+        allowPrerelease: true
+      settings:
+        Ensure: Absent
+
+    ## This will look weird unless you change your Windows accent
+    - resource: Microsoft.Windows.Developer/EnableDarkMode
+      directives:
+        description: Enable dark mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+
+    # Install software
+    ## todo

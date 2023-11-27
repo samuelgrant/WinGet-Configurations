@@ -30,7 +30,7 @@ properties:
         allowPrerelease: true
       settings:
         Ensure: Absent
-    
+
     - resource: Microsoft.Windows.Developer/ShowHiddenFiles
       directives:
         description: Show hidden files
@@ -124,5 +124,4 @@ properties:
         allowPrerelease: true
       settings:
         id: Yubico.YubikeyManager
-        source: winget            
-    ## todo
+        source: winget

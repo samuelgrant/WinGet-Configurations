@@ -16,7 +16,7 @@ Changes the following settings:
 - Show hidden files
 - Enables dark mode (You still need to choose an accent in Settings > Personalize)
 
-## Installs
+**Installs:**
 - [Discord](https://winget.run/pkg/Discord/Discord)
 - [Firefox](https://winget.run/pkg/Mozilla/Firefox)
 - [Google Chrome](https://winget.run/pkg/Google/Chrome)
@@ -25,3 +25,11 @@ Changes the following settings:
 - [ShareX](https://winget.run/pkg/ShareX/ShareX)
 - [Steam](https://winget.run/pkg/Valve/Steam)
 - [Yubikey Manager](https://winget.run/pkg/Yubico/YubikeyManager)
+
+### Eve Online
+Installs the following software
+- [Evemon](https://winget.run/pkg/EVEMonDevelopmentTeam)
+- [Eve Online](https://winstall.app/apps/CCPGames.EVEOnline)
+- [Mumble](https://winget.run/pkg/Mumble/Mumble.Client)
+- [Pidgin](https://winget.run/pkg/Pidgin/Pidgin)
+- [Pyfa](https://winget.run/pkg/pyfa/pyfa)

@@ -54,3 +54,12 @@ properties:
       settings:
         id: pyfa.pyfa
         source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: utils/sharex
+      directives:
+        description: Install ShareX
+        allowPrerelease: true
+      settings:
+        id: ShareX.ShareX
+        source: winget        

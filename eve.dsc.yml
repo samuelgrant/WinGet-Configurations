@@ -22,10 +22,10 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: comms/xmpp
       directives:
-        description: Install Pidgin
+        description: Install Gajim
         allowPrerelease: true
       settings:
-        id: Pidgin.Pidgin
+        id: Gajim.Gajim
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage

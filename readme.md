@@ -36,3 +36,20 @@ Installs the following software
 - [ShareX](https://winget.run/pkg/ShareX/ShareX)
 - [Stream Deck](https://www.elgato.com/ww/en/s/explore-stream-deck)
 
+### Development (WIP)
+Installs the following packages
+- [Visual Studio](https://winget.run/pkg/Microsoft/VisualStudio.2022.Community.Preview) + Desktop Development & Website Development
+- [Visual Studio Code](https://code.visualstudio.com/) + Plugins
+- [GIT](https://winget.run/pkg/Git/Git) + [Desktop](https://winget.run/pkg/GitHub/GitHubDesktop)
+- [Docker Desktop](https://winget.run/pkg/Docker/DockerDesktop)
+- [Postman](https://winget.run/pkg/Postman/Postman)
+
+> [!NOTE]
+> The WinGetPackage DSC doesn't provide the ability to pass arguments to the installer. This is a known issue see: https://github.com/microsoft/winget-cli/issues/3401
+
+
+**Todo:**
+
+Setup a script that enables services using Docker Compose:
+- Postgres
+

@@ -1,0 +1,116 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  
+  resources:
+    # --- Install IDEs ---
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.vs
+      directives:
+        description: Install Visual Studio 2022 Community
+        securityContext: elevated
+      settings:
+        id: Microsoft.VisualStudio.2022.Community
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.vscode
+      directives:
+        description: Install Visual Studio Code
+        securityContext: elevated
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+
+    # --- Configure IDEs ---
+    - resource: Microsoft.VisualStudio.DSC/VSComponents
+      dependsOn:
+        - install.vs
+      directives:
+        description: Install Visual Studio workloads
+        allowPrerelease: true
+        securityContext: elevated
+      settings:
+        productId: Microsoft.VisualStudio.Product.Community
+        channelId: VisualStudio.17.Release
+        vsConfigFile: '${WinGetConfigRoot}\config\.vsconfig'
+        includeRecommended: true
+
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      dependsOn:
+        - install.vs
+      directives:
+        description: VSC add Liveshare
+        allowPrerelease: true
+      settings:
+        Name: MS-vsliveshare.vsliveshare
+        Exist: true
+
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      dependsOn:
+        - install.vs
+      directives:
+        description: VSC add WSL
+        allowPrerelease: true
+      settings:
+        Name: ms-vscode-remote.remote-wsl
+        Exist: true
+
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      dependsOn:
+        - install.vs
+      directives:
+        description: VSC add React snippets
+        allowPrerelease: true
+      settings:
+        Name: dsznajder.es7-react-js-snippets
+        Exist: true
+
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      dependsOn:
+        - install.vs
+      directives:
+        description: VSC add Postgres
+        allowPrerelease: true
+      settings:
+        Name: ms-ossdata.vscode-pgsql
+        Exist: true        
+
+    # --- Install GIT ---
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.git
+      directives:
+        description: Install GIT
+        securityContext: elevated
+      settings:
+        id: Git.Git
+        source: winget
+        arguments:
+          COMPONENTS: 'assoc,gitbash,gitcore,gitext_tool,blame'
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.git.desktop
+      directives:
+        description: Install Github Desktop
+      settings:
+        id: GitHub.GitHubDesktop
+        source: winget            
+
+    # --- Install Engines ---
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.docker
+      directives:
+        description: Install Docker Desktop
+        securityContext: elevated
+      settings:
+        id: Docker.DockerDesktop
+        source: winget
+
+    # --- Install Tools ---
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install.postman
+      directives:
+        description: Install Postman
+      settings:
+        id: Postman.Postman
+        source: winget

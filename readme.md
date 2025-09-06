@@ -33,3 +33,6 @@ Installs the following software
 - [Mumble](https://winget.run/pkg/Mumble/Mumble.Client)
 - [Pidgin](https://winget.run/pkg/Pidgin/Pidgin)
 - [Pyfa](https://winget.run/pkg/pyfa/pyfa)
+- [ShareX](https://winget.run/pkg/ShareX/ShareX)
+- [Stream Deck](https://www.elgato.com/ww/en/s/explore-stream-deck)
+
